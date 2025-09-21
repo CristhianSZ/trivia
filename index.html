@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia de Ciudadanía Digital - Experiencia Inmersiva</title>
+    <!-- No usaremos Bootstrap, el CSS es 100% personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Capa de Fondo Fija (Efecto Parallax) -->
+    <div class="background-layer"></div>
+
+    <!-- Contenedor principal para el scroll -->
+    <main id="trivia-container">
+
+        <!-- SECCIÓN 1: INICIO -->
+        <section id="section-inicio" class="trivia-section">
+            <div class="content-wrapper">
+                <h1 id="main-title">Trivia: El Ciudadano Digital Seguro</h1>
+                <p id="main-subtitle" class="lead">Pon a prueba tus conocimientos sobre los peligros y buenas prácticas en la red.</p>
+                <div id="main-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('section-juego')">Iniciar Trivia</button>
+                    <button class="btn btn-secondary" onclick="showHelp()">Ayuda</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: JUEGO (Nombre y Preguntas) -->
+        <section id="section-juego" class="trivia-section">
+            <div class="content-wrapper">
+                <!-- Contenedor para el nombre -->
+                <div id="contenedor-nombre">
+                    <label for="nombre-jugador" class="form-label">Ingresa tu nombre para comenzar:</label>
+                    <input type="text" id="nombre-jugador" class="form-control" placeholder="Tu nombre aquí...">
+                    <button id="btn-empezar-juego" class="btn btn-success">¡Empezar a jugar!</button>
+                </div>
+                <!-- Contenedor para la trivia (inicialmente oculto) -->
+                <div id="contenedor-trivia" class="hidden">
+                    <p id="progreso" class="fw-bold">Pregunta 1 de 10</p>
+                    <h2 id="pregunta"></h2>
+                    <div id="opciones" class="d-grid">
+                        <!-- Opciones generadas por JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: RESULTADOS -->
+        <section id="section-resultados" class="trivia-section">
+            <div class="content-wrapper">
+                <h2 id="nombre-resultado"></h2>
+                <p class="fs-4">Tu puntaje final es:</p>
+                <p id="puntaje" class="display-1"></p>
+                <p id="mensaje-final" class="lead"></p>
+                <button class="btn btn-primary" onclick="scrollToSection('section-inicio')">Jugar de Nuevo</button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modal de Ayuda (sin Bootstrap, con CSS puro) -->
+    <div id="modal-ayuda" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="hideHelp()">&times;</span>
+            <h2>¿Cómo se juega?</h2>
+            <p>El juego consiste en una trivia de 10 preguntas sobre seguridad y ciudadanía digital.</p>
+            <ol>
+                <li>Presiona "Iniciar Trivia" para comenzar.</li>
+                <li>Ingresa tu nombre.</li>
+                <li>Lee cada pregunta y selecciona una de las cuatro opciones.</li>
+                <li>Al finalizar, recibirás tu puntaje y un mensaje.</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- jQuery (necesario para la lógica de animación) y nuestro script -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
