@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trivia de Ciudadanía Digital - Experiencia Inmersiva</title>
-    <!-- No usaremos Bootstrap, el CSS es 100% personalizado -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -38,7 +37,7 @@
                 </div>
                 <!-- Contenedor para la trivia (inicialmente oculto) -->
                 <div id="contenedor-trivia" class="hidden">
-                    <p id="progreso" class="fw-bold">Pregunta 1 de 10</p>
+                    <p id="progreso" class="fw-bold">Pregunta 1 de 5</p>
                     <h2 id="pregunta"></h2>
                     <div id="opciones" class="d-grid">
                         <!-- Opciones generadas por JS -->
@@ -65,7 +64,8 @@
         <div class="modal-content">
             <span class="close-button" onclick="hideHelp()">&times;</span>
             <h2>¿Cómo se juega?</h2>
-            <p>El juego consiste en una trivia de 10 preguntas sobre seguridad y ciudadanía digital.</p>
+            <!-- CAMBIO REALIZADO AQUÍ -->
+            <p>El juego consiste en una trivia de 5 preguntas aleatorias sobre seguridad y ciudadanía digital.</p>
             <ol>
                 <li>Presiona "Iniciar Trivia" para comenzar.</li>
                 <li>Ingresa tu nombre.</li>
@@ -75,7 +75,6 @@
         </div>
     </div>
 
-    <!-- jQuery (necesario para la lógica de animación) y nuestro script -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="script.js"></script>
 </body>
