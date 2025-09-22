@@ -1,130 +1,231 @@
 /* --- Reset Básico y Estilos Globales --- */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth; /* Permite el scroll suave con JS */
+  scroll-behavior: smooth; /* Permite el scroll suave con JS */
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    color: #fff;
-    background-color: #111;
-    overflow-x: hidden; /* Previene el scroll horizontal */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  color: #fff;
+  background-color: #111;
+  overflow-x: hidden; /* Previene el scroll horizontal */
 }
 
 /* --- Capa de Fondo Fija (Efecto Parallax) --- */
 .background-layer {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* Reemplaza esta URL con la imagen que desees */
-    background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop' );
-    background-size: cover;
-    background-position: center center;
-    z-index: -1; /* Se queda detrás de todo */
-    filter: brightness(0.6); /* Oscurece un poco la imagen para que el texto resalte */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Reemplaza esta URL con la imagen que desees */
+  background-image: url("images/background.jpg");
+  background-size: cover;
+  background-position: center center;
+  z-index: -1; /* Se queda detrás de todo */
+  filter: brightness(
+    0.6
+  ); /* Oscurece un poco la imagen para que el texto resalte */
 }
 
 /* --- Estructura de Secciones --- */
 .trivia-section {
-    height: 100vh; /* Cada sección ocupa toda la pantalla */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 2rem;
+  height: 100vh; /* Cada sección ocupa toda la pantalla */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
 }
 
 .content-wrapper {
-    max-width: 800px;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 40px;
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+  max-width: 800px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* --- Estilos de Texto y Títulos --- */
-h1 { font-size: 3.5rem; font-weight: 700; margin-bottom: 1rem; }
-h2 { font-size: 2.5rem; margin-bottom: 1rem; }
-.lead { font-size: 1.25rem; opacity: 0.9; margin-bottom: 2rem; }
-.fs-4 { font-size: 1.5rem; }
-.display-1 { font-size: 6rem; font-weight: bold; color: #0d6efd; }
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.lead {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+.fs-4 {
+  font-size: 1.5rem;
+}
+.display-1 {
+  font-size: 6rem;
+  font-weight: bold;
+  color: #0d6efd;
+}
 
 /* --- Botones y Formularios --- */
 .btn {
-    display: inline-block;
-    padding: 12px 28px;
-    font-size: 1rem;
-    font-weight: 600;
-    text-decoration: none;
-    border: 2px solid transparent;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin: 0.5rem;
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0.5rem;
 }
-.btn-primary { background-color: #0d6efd; color: white; border-color: #0d6efd; }
-.btn-primary:hover { background-color: #0b5ed7; border-color: #0a58ca; }
-.btn-secondary { background-color: transparent; color: white; border-color: rgba(255,255,255,0.7); }
-.btn-secondary:hover { background-color: rgba(255,255,255,0.1); border-color: white; }
-.btn-success { background-color: #198754; color: white; border-color: #198754; margin-top: 1rem; }
-.btn-success:hover { background-color: #157347; border-color: #146c43; }
+.btn-primary {
+  background-color: #0d6efd;
+  color: white;
+  border-color: #0d6efd;
+}
+.btn-primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+.btn-secondary {
+  background-color: transparent;
+  color: white;
+  border-color: rgba(255, 255, 255, 0.7);
+}
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: white;
+}
+.btn-success {
+  background-color: #198754;
+  color: white;
+  border-color: #198754;
+  margin-top: 1rem;
+}
+.btn-success:hover {
+  background-color: #157347;
+  border-color: #146c43;
+}
 
-.form-label { display: block; font-size: 1.2rem; margin-bottom: 1rem; }
-.form-control {
-    width: 100%;
-    padding: 12px;
-    font-size: 1.1rem;
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.3);
-    border-radius: 8px;
-    color: white;
+.form-label {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
-.form-control::placeholder { color: rgba(255,255,255,0.5); }
+.form-control {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  color: white;
+}
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
 
 /* --- Trivia y Opciones --- */
-#contenedor-trivia { transition: opacity 0.5s ease; }
-.d-grid { display: grid; gap: 1rem; }
-.btn-opcion {
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.3);
-    color: white;
-    text-align: left;
-    padding: 15px;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    transition: all 0.2s ease;
+#contenedor-trivia {
+  transition: opacity 0.5s ease;
 }
-.btn-opcion:hover:not(:disabled) { background-color: rgba(255,255,255,0.2); transform: scale(1.02); }
-.btn-opcion.correcta { background-color: #198754; border-color: #198754; color: white; }
-.btn-opcion.incorrecta { background-color: #dc3545; border-color: #dc3545; color: white; }
-.btn-opcion:disabled { cursor: not-allowed; }
+.d-grid {
+  display: grid;
+  gap: 1rem;
+}
+.btn-opcion {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  text-align: left;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+}
+.btn-opcion:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.02);
+}
+.btn-opcion.correcta {
+  background-color: #198754;
+  border-color: #198754;
+  color: white;
+}
+.btn-opcion.incorrecta {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: white;
+}
+.btn-opcion:disabled {
+  cursor: not-allowed;
+}
 
 /* --- Clases de utilidad --- */
-.hidden { opacity: 0; pointer-events: none; height: 0; overflow: hidden; }
-.fw-bold { font-weight: bold; }
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+  overflow: hidden;
+}
+.fw-bold {
+  font-weight: bold;
+}
 
 /* --- Modal de Ayuda --- */
 .modal {
-    display: none; position: fixed; z-index: 100; left: 0; top: 0;
-    width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.7);
-    animation: fadeInModal 0.5s;
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  animation: fadeInModal 0.5s;
 }
 .modal-content {
-    background-color: #222; color: #f1f1f1; margin: 15% auto; padding: 20px;
-    border: 1px solid #888; width: 80%; max-width: 500px; border-radius: 10px;
-    text-align: left;
+  background-color: #222;
+  color: #f1f1f1;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+  text-align: left;
 }
-.close-button { color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer; }
-.close-button:hover { color: white; }
-@keyframes fadeInModal { from {opacity: 0} to {opacity: 1} }
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close-button:hover {
+  color: white;
+}
+@keyframes fadeInModal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
