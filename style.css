@@ -25,7 +25,7 @@ body {
   width: 100%;
   height: 100%;
   /* Reemplaza esta URL con la imagen que desees */
-  background-image: url("images/background.jpg");
+  background-image: url("images/background2.jpg");
   background-size: cover;
   background-position: center center;
   z-index: -1; /* Se queda detrás de todo */
@@ -93,33 +93,48 @@ h2 {
   transition: all 0.3s ease;
   margin: 0.5rem;
 }
-.btn-primary {
-  background-color: #0d6efd;
-  color: white;
-  border-color: #0d6efd;
+.btn-primary {  
+    background-color: #39FF14;  
+    color: black; /* Mejor contraste con verde neón */  
+    border-color: #39FF14;  
+    padding: 12px 28px; /* Ya tiene padding adecuado */  
+    border-radius: 50px; /* Ya tiene border-radius moderno */  
+}  
+  
+.btn-primary:hover {  
+    background-color: #39FF14;  
+    border-color: #39FF14;  
+    box-shadow: 0 0 10px #39FF14;  
+    transform: scale(1.05);  
 }
-.btn-primary:hover {
-  background-color: #0b5ed7;
-  border-color: #0a58ca;
+.btn-secondary {   
+    background-color: #010202;   
+    color: white;   
+    border-color: #000000;   
+}  
+  
+.btn-secondary:hover {   
+    background-color: #39FF14;   
+    border-color: #010102;  
+    box-shadow: 0 0 10px #39FF14;  
+    transform: scale(1.03);  
 }
-.btn-secondary {
-  background-color: transparent;
-  color: white;
-  border-color: rgba(255, 255, 255, 0.7);
-}
-.btn-secondary:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-color: white;
-}
-.btn-success {
-  background-color: #198754;
-  color: white;
-  border-color: #198754;
-  margin-top: 1rem;
-}
-.btn-success:hover {
-  background-color: #157347;
-  border-color: #146c43;
+.btn-success {  
+    background-color: #39FF14;  
+    color: rgb(0, 0, 0);  
+    border-color: #39FF14;  
+    font-weight: bold;  
+    padding: 12px 24px;  
+    border-radius: 8px;  
+    cursor: pointer;  
+    transition: all 0.3s ease-in-out;  
+}  
+  
+.btn-success:hover {  
+    background-color: #39FF14;  
+    border-color: #39FF14;  
+    box-shadow: 0 0 10px #39FF14;  
+    transform: scale(1.05);  
 }
 
 .form-label {
